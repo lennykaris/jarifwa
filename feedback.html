@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Jarifwa International Teachers Placement</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Feedback section styling */
+    #feedback {
+      background-image: url('feedback.jpg'); /* Path to your background image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .feedback-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .feedback-message {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-style: italic;
+      display: none; /* Hide all messages initially */
+    }
+
+    .feedback-message.active {
+      display: block; /* Show the active message */
+    }
+
+    /* Navigation buttons for feedback carousel */
+    .feedback-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .feedback-nav button {
+      background: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .feedback-nav button.active {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Jarifwa International Teachers Placement</h1>
+      <nav>
+        <ul id="navList">
+          <li><a href="vision.html">Vision</a></li>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="countries.html">Countries</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://forms.gle/6wNeyZKyWUXmXoPs6" class="apply-btn">Apply</a></li>
+          <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="feedback">
+      <div class="container">
+        <h2>Feedback</h2>
+        <div class="feedback-container">
+          <!-- Feedback messages -->
+          <div class="feedback-message active">"Working with Jarifwa has been a transformative experience for me. The support and resources provided have enabled me to excel in my role as an international teacher. I am grateful for the opportunity to make a positive impact on students' lives."</div>
+          <div class="feedback-message">"As a teacher from Kenya, Jarifwa has opened doors for me to explore new cultures and teaching methodologies. The collaborative environment and professional development opportunities have enhanced my skills and broadened my perspective."</div>
+          <div class="feedback-message">"Jarifwa's dedication to teacher well-being is unmatched. From pre-departure orientation to ongoing support in the classroom, I have felt valued and supported every step of the way. I highly recommend Jarifwa to fellow educators seeking enriching international experiences"</div>
+          <div class="feedback-message">"I have been teaching abroad with Jarifwa for several years now, and it has been a rewarding journey. The cultural exchange and cross-cultural learning have enriched my teaching practice and deepened my appreciation for diversity."</div>
+          <div class="feedback-message">"Jarifwa's commitment to teacher empowerment is commendable. The emphasis on professional growth and mentorship opportunities have empowered me to reach my full potential as an educator. I am proud to be part of the Jarifwa community."</div>
+        </div>
+        <div class="feedback-nav">
+          <button class="active" onclick="showFeedback(0)"></button>
+          <button onclick="showFeedback(1)"></button>
+          <button onclick="showFeedback(2)"></button>
+          <button onclick="showFeedback(3)"></button>
+          <button onclick="showFeedback(4)"></button>
+        </div>
+       
+    </section>
+  </main>
+  <footer>
+   
+    <div class="container">
+      <p>&copy; 2024 Teacher Recruitment Agency</p>
+    </div>
+    <div class="feedback-btn">
+      <a href="mailto:placement@jarifwainternational.com?subject=Feedback" class="feedback-link">Provide Feedback</a>
+    </div>
+  </footer>
+  <script>
+    let currentFeedback = 0;
+    const feedbackMessages = document.querySelectorAll('.feedback-message');
+    const feedbackButtons = document.querySelectorAll('.feedback-nav button');
+
+    function showFeedback(index) {
+      feedbackMessages[currentFeedback].classList.remove('active');
+      feedbackButtons[currentFeedback].classList.remove('active');
+      feedbackMessages[index].classList.add('active');
+      feedbackButtons[index].classList.add('active');
+      currentFeedback = index;
+    }
+
+    // Automatically change feedback every 5 seconds
+    setInterval(() => {
+      let nextFeedback = (currentFeedback + 1) % feedbackMessages.length;
+      showFeedback(nextFeedback);
+    }, 5000);
+  </script>
+</body>
+</html>

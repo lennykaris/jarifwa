@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries - Jarifwa International Teachers Placement</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Add a background image to the countries section */
+    #countries {
+      background-image: url('world.jpg'); /* Path to your background image */
+      background-size: cover;
+      background-position: center;
+      color: white; /* Text color for better visibility */
+      padding: 100px 0; /* Adjust padding as needed */
+    }
+
+    /* Style for the container to align items horizontally */
+    .country {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px; /* Space between each country section */
+    }
+
+    /* Style for the globe-shaped flags */
+    .flag {
+      position: relative;
+      width: 350px; /* Adjust width as needed */
+      height: 150px; /* Adjust height to match width for a circular shape */
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 20px; /* Space between the flag and the text */
+    }
+    .flag img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .tooltip {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Jarifwa International Teachers Placement</h1>
+      <nav>
+        <ul id="navList">
+          <li><a href="vision.html">Vision</a></li>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="countries.html">Countries</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://forms.gle/6wNeyZKyWUXmXoPs6" class="apply-btn">Apply</a></li>
+          <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="countries">
+      <div class="container">
+        <h2></h2>
+        <div class="country">
+          <div class="flag">
+            <img src="https://i.pinimg.com/564x/50/f3/9f/50f39febff794741fed9d23e3a489e07.jpg" alt="USA Flag">
+          </div>
+          <div class="tooltip">USA: In the United States, there is a continuous demand for teachers due to the increasing student population and the retirement of experienced educators. With evolving educational standards and the need for specialized instruction, qualified teachers are essential to provide quality education and support the diverse learning needs of students across the country.</div>
+        </div>
+        <div class="country">
+          <div class="flag">
+            <img src="https://i.pinimg.com/564x/cb/a2/68/cba2689bdcef1c2bf3b9007b3229b997.jpg" alt="China Flag">
+          </div>
+          <div class="tooltip">China's rapid expansion of the education sector has created a growing need for teachers. With initiatives to improve the quality of education and enhance English language proficiency, there is a significant demand for qualified educators to fill teaching positions in schools, language institutes, and international programs across the country.</div>
+        </div>
+        <div class="country">
+          <div class="flag">
+            <img src="https://i.pinimg.com/564x/cd/ef/af/cdefaffcbcc3f2069e5077672fa27ef4.jpg" alt="Australia Flag">
+          </div>
+          <div class="tooltip">Australia's commitment to providing quality education for all students has led to opportunities for teachers. With a focus on innovation, critical thinking, and STEM education, there is a demand for skilled educators who can inspire students and contribute to the country's future workforce in diverse fields such as science, technology, engineering, and mathematics.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Teacher Recruitment Agency</p>
+    </div>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
+

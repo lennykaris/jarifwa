@@ -1,0 +1,128 @@
+/* Common styles for all pages */
+
+/* Container styling */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header styling */
+header {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+.apply-btn, .signup-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.apply-btn:hover, .signup-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Main section styling */
+main {
+  padding: 20px 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+/* Footer styling */
+footer {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  border-top: 1px solid #e7e7e7;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Specific sections styling */
+.flag {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.flag img {
+  margin-right: 10px;
+}
+
+.tooltip {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.feedback-btn .feedback-link {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.feedback-btn .feedback-link:hover {
+  background-color: #0056b3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 5px 0;
+}
+
+form input {
+  padding: 10px;
+  margin: 5px 0 20px 0;
+}
+
+form button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
