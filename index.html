@@ -43,17 +43,23 @@
       padding: 50px 0;
     }
     .feedback-container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
     }
     .feedback-message {
+      display: none;
       background-color: white;
       border-radius: 50px; /* Ensures oval shape */
       padding: 20px;
       max-width: 70%; /* Adjust width as needed */
-      margin: 20px;
+      margin: 20px auto;
       text-align: center;
+    }
+    .feedback-message.active {
+      display: block;
     }
 
     /* Logo styling */
@@ -103,13 +109,63 @@
       padding: 5px 10px;
       border-radius: 5px;
     }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+
+      header {
+        padding: 10px 0;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .apply-btn, .signup-btn {
+        display: block;
+        margin: 10px auto;
+      }
+
+      main {
+        padding: 10px 0;
+      }
+
+      footer {
+        padding: 20px 0;
+      }
+
+      .site-footer {
+        padding: 20px 0;
+      }
+
+      .wrapper {
+        width: 90%;
+      }
+
+      .feedback-container {
+        width: 100%;
+      }
+
+      .feedback-message {
+        max-width: 90%;
+        margin: 10px auto;
+      }
+    }
   </style>
   <meta name="google-site-verification" content="fsZVS90QN8__XDQD6Jy-IQtt7fAWOMaRbM8rsjd78nk" />
 </head>
 <body>
   <header>
     <div class="logo-container">
-      
+      <img src="logo.jpg" alt="Jarifwa Logo" class="logo">
       <h1>Jarifwa international teachers placement</h1>
     </div>
     <nav>
@@ -144,8 +200,7 @@
     <div class="container">
       <h2>Teacher Feedback</h2>
       <div class="feedback-container">
-        <!-- Feedback messages -->
-        <div class="feedback-message">"Working with Jarifwa has been a transformative experience for me. The support and resources provided have enabled me to excel in my role as an international teacher. I am grateful for the opportunity to make a positive impact on students' lives."</div>
+        <div class="feedback-message active">"Working with Jarifwa has been a transformative experience for me. The support and resources provided have enabled me to excel in my role as an international teacher. I am grateful for the opportunity to make a positive impact on students' lives."</div>
         <div class="feedback-message">"As a teacher from Kenya, Jarifwa has opened doors for me to explore new cultures and teaching methodologies. The collaborative environment and professional development opportunities have enhanced my skills and broadened my perspective."</div>
         <div class="feedback-message">"Jarifwa's dedication to teacher well-being is unmatched. From pre-departure orientation to ongoing support in the classroom, I have felt valued and supported every step of the way. I highly recommend Jarifwa to fellow educators seeking enriching international experiences"</div>
         <div class="feedback-message">"I have been teaching abroad with Jarifwa for several years now, and it has been a rewarding journey. The cultural exchange and cross-cultural learning have enriched my teaching practice and deepened my appreciation for diversity."</div>
@@ -172,5 +227,25 @@
       </div>
     </footer>
   </footer>
+
+  <script>
+    // JavaScript for feedback slider
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.feedback-message');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 4000);
+  </script>
 </body>
 </html>

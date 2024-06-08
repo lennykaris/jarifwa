@@ -1,6 +1,4 @@
-/* Common styles for all pages */
-
-/* Container styling */
+/* General container styling */
 .container {
   width: 80%;
   margin: 0 auto;
@@ -8,9 +6,12 @@
 
 /* Header styling */
 header {
-  background-color: #f8f8f8;
-  padding: 20px 0;
-  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(37, 131, 253);
+  padding: 10px;
+  flex-wrap: wrap;
 }
 
 header h1 {
@@ -19,21 +20,41 @@ header h1 {
   margin: 0;
 }
 
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Makes the image circular */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  margin-right: 10px;
+}
+
+nav {
+  flex-grow: 1;
+}
+
 nav ul {
-  list-style-type: none;
+  display: flex;
+  list-style: none;
   padding: 0;
-  text-align: center;
+  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  display: inline;
   margin: 0 10px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: white;
 }
 
 nav ul li a:hover {
@@ -41,9 +62,9 @@ nav ul li a:hover {
 }
 
 .apply-btn, .signup-btn {
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 15px;
+  background-color: white;
+  color: rgb(37, 131, 253);
+  padding: 5px 10px;
   border-radius: 5px;
 }
 
@@ -61,6 +82,56 @@ h2 {
   margin-top: 0;
 }
 
+/* Vision and Mission section styling */
+#vision-mission {
+  background-image: url('background.jpg'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 255); /* Adjust text color for better visibility */
+  padding: 200px 0;
+  font-size: larger;
+  font-weight: 300;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#vision-mission .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#vision-mission .vision,
+#vision-mission .mission {
+  width: 45%; /* Adjust width as needed */
+}
+
+/* Feedback Section */
+#feedback {
+  background-color: rgb(23, 83, 247);
+  padding: 50px 0;
+}
+
+.feedback-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.feedback-message {
+  display: none;
+  background-color: white;
+  border-radius: 50px; /* Ensures oval shape */
+  padding: 20px;
+  max-width: 70%; /* Adjust width as needed */
+  margin: 20px auto;
+  text-align: center;
+}
+
+.feedback-message.active {
+  display: block;
+}
+
 /* Footer styling */
 footer {
   background-color: #f8f8f8;
@@ -69,64 +140,6 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
-
-/* Specific sections styling */
-.flag {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.flag img {
-  margin-right: 10px;
-}
-
-.tooltip {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.feedback-btn .feedback-link {
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.feedback-btn .feedback-link:hover {
-  background-color: #0056b3;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  margin: 5px 0;
-}
-
-form input {
-  padding: 10px;
-  margin: 5px 0 20px 0;
-}
-
-form button {
-  background-color: #007BFF;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0056b3;
-}
-/* Footer styling */
 
 .site-footer {
   background-color: #f8f8f8;
@@ -181,17 +194,17 @@ form button:hover {
   margin: 0;
 }
 
-.social ul li {
+social ul li {
   display: inline;
   margin-right: 10px;
 }
 
-.social ul li a {
+social ul li a {
   text-decoration: none;
   color: #007BFF;
 }
 
-.social ul li a:hover {
+social ul li a:hover {
   color: #0056b3;
 }
 
@@ -275,3 +288,58 @@ form button:hover {
   color: #0056b3;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  header {
+    padding: 10px 0;
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .apply-btn, .signup-btn {
+    display: block;
+    margin: 10px auto;
+  }
+
+  main {
+    padding: 10px 0;
+  }
+
+  footer {
+    padding: 20px 0;
+  }
+
+  .site-footer {
+    padding: 20px 0;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
+
+  .feedback-container {
+    width: 100%;
+  }
+
+  .feedback-message {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+}
